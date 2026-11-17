@@ -1,0 +1,12 @@
+# Python libraries for Mango Server 1.2.1.
+# Install with the same Python 3.12 used to run the server:
+#   python -m pip install -r requirements-server.txt
+#
+# - websockets: the server's WebSocket hub (clients connect outbound).
+#   Pure Python, no compilation needed, works on Windows and Linux.
+# - mcp: the MCP (Model Context Protocol) server library. Starlette comes
+#   with it.
+# - uvicorn: the ASGI server that serves the dashboard and the MCP endpoint.
+websockets>=12,<18
+mcp>=1.8,<2
+uvicorn>=0.30

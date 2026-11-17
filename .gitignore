@@ -1,0 +1,35 @@
+# Build outputs — published as GitHub Release assets, never committed
+*.exe
+*.zip
+*.msi
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Server runtime data (created at install / first run — contains the
+# machine registry, auth hashes and audit log; never commit)
+data/
+data-backup-*/
+*.log
+
+# Installer build staging
+*_stage/
+stage/
+
+# OS / editor leftovers
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local notes (kept out of the public repo)
+*.local.md

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1200" height="600" rx="16" fill="#0b1220"/>
+
+  <!-- title -->
+  <text x="600" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#f8fafc">Mango Server — Architecture</text>
+  <text x="600" y="70" text-anchor="middle" font-size="15" fill="#94a3b8">One server, many Windows machines. Clients dial out — no inbound ports on the machines.</text>
+
+  <!-- left: AI assistants -->
+  <rect x="30" y="150" width="250" height="120" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="45" y="182" font-size="17" font-weight="700" fill="#f8fafc">AI assistants</text>
+  <text x="45" y="208" font-size="14" fill="#cbd5e1">Claude Desktop</text>
+  <text x="45" y="230" font-size="14" fill="#cbd5e1">Gemini CLI</text>
+  <text x="45" y="252" font-size="14" fill="#cbd5e1">ChatGPT</text>
+
+  <!-- left: admin browser -->
+  <rect x="30" y="310" width="250" height="120" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="45" y="342" font-size="17" font-weight="700" fill="#f8fafc">Admin browser</text>
+  <text x="45" y="368" font-size="14" fill="#cbd5e1">Dashboard</text>
+  <text x="45" y="390" font-size="14" fill="#cbd5e1">Approve machines</text>
+  <text x="45" y="412" font-size="14" fill="#cbd5e1">Tokens &amp; packages</text>
+
+  <!-- center: Mango Server -->
+  <rect x="360" y="110" width="400" height="380" rx="14" fill="#16213a" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="152" text-anchor="middle" font-size="24" font-weight="700" fill="#fbbf24">Mango Server</text>
+  <text x="560" y="180" text-anchor="middle" font-size="14" fill="#94a3b8">port 8443 · Python</text>
+  <line x1="385" y1="196" x2="735" y2="196" stroke="#334155" stroke-width="1"/>
+  <circle cx="388" cy="223" r="4" fill="#22d3ee"/><text x="404" y="228" font-size="15" fill="#e2e8f0">MCP endpoint — POST /mcp</text>
+  <circle cx="388" cy="257" r="4" fill="#22d3ee"/><text x="404" y="262" font-size="15" fill="#e2e8f0">Dashboard — web UI</text>
+  <circle cx="388" cy="291" r="4" fill="#22d3ee"/><text x="404" y="296" font-size="15" fill="#e2e8f0">WebSocket hub — clients dial out</text>
+  <circle cx="388" cy="325" r="4" fill="#22d3ee"/><text x="404" y="330" font-size="15" fill="#e2e8f0">Monitor — ping 10 s · stats 5 min</text>
+  <circle cx="388" cy="359" r="4" fill="#22d3ee"/><text x="404" y="364" font-size="15" fill="#e2e8f0">Packages — remote upgrade</text>
+  <circle cx="388" cy="393" r="4" fill="#22d3ee"/><text x="404" y="398" font-size="15" fill="#e2e8f0">Audit log — metadata only</text>
+  <line x1="385" y1="420" x2="735" y2="420" stroke="#334155" stroke-width="1"/>
+  <text x="560" y="452" text-anchor="middle" font-size="13" fill="#94a3b8">Enroll by code · approve on dashboard</text>
+
+  <!-- right: Windows machines -->
+  <rect x="900" y="135" width="270" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="915" y="167" font-size="16" font-weight="700" fill="#f8fafc">Windows machine 1</text>
+  <text x="915" y="192" font-size="13.5" fill="#cbd5e1">Mango Client 2.1.9</text>
+  <text x="915" y="213" font-size="13.5" fill="#cbd5e1">101 tools · SYSTEM service</text>
+
+  <rect x="900" y="265" width="270" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="915" y="297" font-size="16" font-weight="700" fill="#f8fafc">Windows machine 2</text>
+  <text x="915" y="322" font-size="13.5" fill="#cbd5e1">Mango Client 2.1.9</text>
+  <text x="915" y="343" font-size="13.5" fill="#cbd5e1">101 tools · SYSTEM service</text>
+
+  <rect x="900" y="395" width="270" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="915" y="427" font-size="16" font-weight="700" fill="#f8fafc">Windows machine 3</text>
+  <text x="915" y="452" font-size="13.5" fill="#cbd5e1">Mango Client 2.1.9</text>
+  <text x="915" y="473" font-size="13.5" fill="#cbd5e1">101 tools · SYSTEM service</text>
+
+  <!-- arrows: left -> center -->
+  <line x1="280" y1="210" x2="352" y2="210" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="316" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#22d3ee">MCP</text>
+  <line x1="280" y1="370" x2="352" y2="370" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="316" y="360" text-anchor="middle" font-size="13" font-weight="700" fill="#22d3ee">HTTPS</text>
+
+  <!-- arrows: center -> machines -->
+  <line x1="760" y1="182" x2="892" y2="182" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="760" y1="312" x2="892" y2="312" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="826" y="302" text-anchor="middle" font-size="13" font-weight="700" fill="#22d3ee">WebSocket</text>
+  <line x1="760" y1="442" x2="892" y2="442" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- footer -->
+  <text x="600" y="540" text-anchor="middle" font-size="14" fill="#94a3b8">MCP: Bearer agent token · Dashboard: admin password · WebSocket: clients dial out, no inbound ports on machines</text>
+  <text x="600" y="568" text-anchor="middle" font-size="14" fill="#94a3b8">Client tools: screen · mouse · keyboard · files · shell · PowerShell · registry · users · system info</text>
+</svg>
