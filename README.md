@@ -247,3 +247,21 @@ pull request.
 
 MIT — see [`LICENSE`](LICENSE). (This is the proposed license; the
 maintainer may change it before the first public release.)
+
+---
+
+## ☕ Buy me a coffee
+
+Mango Server is free and open source. If it saves you time, a coffee
+keeps the project going.
+
+**Donate crypto — one EVM address for all of these:**
+
+`0xc569d3d9ed9116d6c09a6fcb63ac491c2cb68149`
+
+| Network | Accepted |
+|---|---|
+| Ethereum | ETH, USDT, USDC |
+| BNB Smart Chain | BNB, USDT, USDC |
+
+Thank you for supporting the project! 🙏
